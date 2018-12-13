@@ -21,7 +21,7 @@ describe('uni test swapi api', () => {
         const mockFetch = jest.fn()
             .mockReturnValue(Promise.resolve({
                 json: () => Promise.resolve({
-                    count: 87,
+                    count: 89,
                     result: [0,1,2,3,4,5]
                 })
             }))
@@ -29,6 +29,8 @@ describe('uni test swapi api', () => {
         return swapi.getPeoplePromise(mockFetch).then(res => {
             expect(mockFetch.mock.calls.length).toBe(1);
             expect(mockFetch).toBeCalledWith('https://swapi.co/api/people');
+            expect(res.count).toEqual(89);
+            expect(res.result.length).toBeGreaterThan(5);
         })
     })
 })
