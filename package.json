@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll *.js",
+    "test:coverage": "jest --watchAll *.js",
+    "test:start": "jest --detectOpenHandles",
     "start": "node server.js"
   },
   "keywords": [],

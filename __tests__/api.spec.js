@@ -33,4 +33,8 @@ describe('uni test swapi api', () => {
             expect((res.result).length).toBeGreaterThan(5);
         })
     })
+
+    afterAll(async (done) => {
+        done()
+    })
 })

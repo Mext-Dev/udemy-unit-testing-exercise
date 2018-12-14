@@ -23,4 +23,6 @@ describe('Unit test fillter function', () => {
         expect(googleSearch('.com', dbMoch).length).toEqual(2)
 
     })
+
+    afterAll(() => setTimeout(() => process.exit(), 1000))
 })
