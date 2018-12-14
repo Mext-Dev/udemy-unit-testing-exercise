@@ -1,4 +1,4 @@
-const googleSearch = require('../server')
+const googleSearch = require('../src/server')
 
 const dbMoch = ['dsd.com', 'swrd.com', 'lol.org']
 
